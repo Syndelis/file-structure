@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'struct'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=struct",
+                    "--package=file-structure-manager"
+                ],
+                "filter": {
+                    "name": "struct",
+                    "kind": "bin"
+                }
+            },
+            "args": ["${input:pickSubcommand}"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'struct'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=struct",
+                    "--package=file-structure-manager"
+                ],
+                "filter": {
+                    "name": "struct",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "pickSubcommand",
+            "type": "pickString",
+            "description": "Select subcommand",
+            "options": [
+                "create",
+                "destroy"
+            ]
+        }
+    ]
+}

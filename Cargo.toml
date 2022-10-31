@@ -1,0 +1,16 @@
+cargo-features = ["different-binary-name"]
+
+[package]
+name = "file-structure-manager"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "struct"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yaml-rust = "0.4.5"
+clap = { version = "4.0", features = ["derive"] }
