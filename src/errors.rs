@@ -1,8 +1,7 @@
 use core::fmt;
 use std::{
-    error::{self, Error},
-    fs, io,
-    path::{Path, PathBuf},
+    error::{self}, io,
+    path::{PathBuf},
 };
 
 pub type Result<T> = std::result::Result<T, Box<dyn error::Error>>;

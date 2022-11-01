@@ -1,8 +1,7 @@
 use clap::{error::ErrorKind, CommandFactory, Parser, Subcommand};
 use std::{
-    error::{self, Error},
-    fs, io,
-    path::{Path, PathBuf},
+    fs,
+    path::{PathBuf},
 };
 use yaml_rust::{Yaml, YamlLoader};
 

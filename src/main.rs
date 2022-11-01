@@ -5,9 +5,9 @@ use clap::Parser;
 use crate::cli::{Cli, Action};
 use crate::errors::{path_error, filter_not_found_error, Result};
 
-use std::{path::{Path, PathBuf}, fs, error::{Error, self}, io};
+use std::{path::{PathBuf}, fs};
 
-use yaml_rust::{YamlLoader, Yaml};
+use yaml_rust::{Yaml};
 
 
 
@@ -17,7 +17,7 @@ fn main() {
     cli.assert_destination_exists();
     let struct_spec = cli.load_yaml().unwrap();
 
-    let res = match cli.action {
+    let _res = match cli.action {
         Action::Create => create_entry(cli.destination, &struct_spec),
         Action::Destroy => destroy_entry(cli.destination, &struct_spec),
     };
