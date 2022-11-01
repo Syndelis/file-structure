@@ -64,11 +64,7 @@ impl Cli {
 
     pub fn assert_destination_exists(&self) {
         if !self.destination.exists() {
-            println!(
-                "Destination directory {} does not exist. \
-                Creating it now...",
-                self.destination.display()
-            );
+            fs::create_dir_all(&self.destination).unwrap();
         }
     }
 }
