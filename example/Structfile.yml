@@ -1,0 +1,20 @@
+folder-a:
+  a.txt: |
+    this
+    is
+    a
+    test
+  
+  b.txt: test b
+
+  folder-b:
+    c.txt: one more file
+    d.txt:
+      dd.txt: |
+        d.txt
+        is
+        not
+        a
+        file
+
+root-file: this file is at root level
