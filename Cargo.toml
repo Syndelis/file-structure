@@ -1,7 +1,7 @@
 cargo-features = ["different-binary-name"]
 
 [package]
-name = "file-structure-manager"
+name = "file-structure"
 version = "0.1.0"
 edition = "2021"
 
