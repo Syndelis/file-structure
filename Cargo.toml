@@ -3,6 +3,14 @@ cargo-features = ["different-binary-name"]
 [package]
 name = "file-structure"
 version = "0.1.0"
+authors = ["Brenno Lemos <brenno@syndel.is>"]
+license = "MIT"
+description = "A CLI tool for creating and destroying file structures based on a YAML templates"
+readme = "README.md"
+homepage = "https://github.com/Syndelis/file-structure"
+repository = "https://github.com/Syndelis/file-structure"
+keywords = ["cli", "file", "structure", "template", "yaml"]
+categories = ["command-line-utilities"]
 edition = "2021"
 
 [[bin]]
